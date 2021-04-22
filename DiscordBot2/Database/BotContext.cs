@@ -9,12 +9,12 @@ namespace DiscordBot2.Database
 {
     class BotContext : DbContext
     {
-        private const string DatabaseName = "SQLiteDB_PiBot";
+        private const string DatabaseName = "SQLiteDB_PiBot.db";
 
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer($@"Server = .\SQLite;Database={DatabaseName};trusted_connection=true");
+            optionsBuilder.UseSqlite($@"DataSource={DatabaseName}");
         }
     }
 

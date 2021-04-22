@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DiscordBot2.Services;
+using DiscordBot2.Database;
 
 namespace DiscordBot2
 {

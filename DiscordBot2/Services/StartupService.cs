@@ -1,6 +1,7 @@
 ﻿using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
+using DiscordBot2.Database;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace DiscordBot2.Services
 
         public StartupService(IServiceProvider provider, DiscordSocketClient discord, CommandService commands, IConfigurationRoot config)
         {
+
             Provider = provider;
             Config = config;
             Discord = discord;
@@ -28,6 +30,7 @@ namespace DiscordBot2.Services
 
         public async Task StartAsync()
         {
+
             string token = Config["token"]; // Kan vara ett fel här. Testa då med en vanlig text-file istället istället för yml.
             if (string.IsNullOrEmpty(token))
             {
