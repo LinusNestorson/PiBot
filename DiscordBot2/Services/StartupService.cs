@@ -31,7 +31,7 @@ namespace DiscordBot2.Services
         public async Task StartAsync()
         {
 
-            string token = Config["token"]; // Kan vara ett fel här. Testa då med en vanlig text-file istället istället för yml.
+            string token = Config["token"];
             if (string.IsNullOrEmpty(token))
             {
                 Console.WriteLine("Please provide your Discord token in _config.yml");

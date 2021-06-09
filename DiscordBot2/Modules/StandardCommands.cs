@@ -16,12 +16,12 @@ namespace DiscordBot2.Modules
         {
             await Context.Channel.SendMessageAsync("Pong!");
         }
-        [Command("Du är bäst Bosse")]
+        [Command("uppskattning")]
         public async Task SignOfLove()
         {
-            await Context.Channel.SendMessageAsync($"Nej du är bäst {Context.User}");
+            await Context.Channel.SendMessageAsync($"Du är bäst {Context.User}");
         }
-        [Command("Banan")]
+        [Command("banan")]
         public async Task Banana()
         {
             await Context.Channel.SendMessageAsync($"Enligt säkra källor är bananen ondskefull, oskyldig, unken och söt.");
@@ -42,6 +42,11 @@ namespace DiscordBot2.Modules
                 .WithCurrentTimestamp();
             var embed = builder.Build();
             await Context.Channel.SendMessageAsync(null, false, embed);
+        }
+        [Command("list")]
+        public async Task CommandList()
+        {
+            await Context.Channel.SendMessageAsync($"Vad vill du? \n- !meme\n- !uppskattning\n- !info\n- !constructor");
         }
     }
 }

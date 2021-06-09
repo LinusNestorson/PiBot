@@ -10,8 +10,6 @@ namespace DiscordBot2
 {
     class Program
     {
-        // Program entry point
-        //static void Main(string[] args)
         public static async Task Main(string[] args)
             => await Startup.RunAsync(args);
     }

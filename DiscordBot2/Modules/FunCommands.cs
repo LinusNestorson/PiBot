@@ -28,5 +28,11 @@ namespace DiscordBot2.Modules
             var embed = builder.Build();
             await Context.Channel.SendMessageAsync(null, false, embed);
         }
+        [Command("randomizer")]
+        public async Task Randomizer()
+        {
+
+        }
+
     }
 }
